@@ -10,21 +10,16 @@ import * as Google from "expo-auth-session/providers/google";
 import react, { useEffect, useState } from "react";
 import HomeScreen from "./Screens/HomeScreen";
 import LoginScreen from "./Screens/LoginScreen";
-// import { NavigationContainer } from "@react-navigation/native";
-// import { createStackNavigator } from "@react-navigation/stack";
+
 WebBrowser.maybeCompleteAuthSession();
-// const Stack = createStackNavigator();
 
 export default function App() {
 	const [accessToken, setAccessToken] = useState(null);
 	const [user, setUser] = useState(null);
 	const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
-		clientId:
-			"381645917892-8do302232u10nlvgr7rdmb21lu37724p.apps.googleusercontent.com",
-		iosClientId:
-			"381645917892-1g345ml3qmmaqu1s3lrsfdflajsils2k.apps.googleusercontent.com",
-		androidClientId:
-			"381645917892-heon16637snik3oig9tcpuk4vns8lauc.apps.googleusercontent.com",
+		clientId: "XXxxXXxxXX.apps.googleusercontent.com",
+		iosClientId: "XXxxXXxxXX.apps.googleusercontent.com",
+		androidClientId: "XXxxXXxxXX.apps.googleusercontent.com",
 	});
 
 	useEffect(() => {
